@@ -63,7 +63,10 @@ define(
 			},
 
             parseMarkdown: function( content ) {
-                return marked( content );
+                content = marked( content );
+                content = content.replace("[flowdoc_example]", "<div class='flowdoc-example'>", "g")
+                content = content.replace("[/flowdoc_example]", "</div>", "g")
+                return content;
             },
 
             getPageContent: function( index ) {
