@@ -3,12 +3,11 @@
 require.config({
 	urlArgs: "bust=" + (new Date()).getTime(),
 	paths: {
-		config:	    "config",
 		jquery:	    "lib/jquery-1.11.0.min",
 		underscore: "lib/underscore-min",
 		backbone:   "lib/backbone-min",
 		text:	    "lib/require.text",
-        marked:	    "lib/marked",
+		marked:	    "lib/marked",
 		state:	    "app/app-state",
 		vent:	    "app/app-event-aggregator"
 	},
@@ -26,7 +25,6 @@ require.config({
 require(
 	[
 		"backbone",
-		"config",
 		"app/app-router",
 		"app/app-view",
 		"app/doc-nav-view",
@@ -35,29 +33,37 @@ require(
 	],
 	function (
 		BB,
-		Config,
 		AppRouter,
 		AppView,
 		DocNavView,
 		ContentView,
 		PagesCollection
 	) {
-        "use strict";
+		"use strict";
 
-        var pages, appView, appRouter;
+		var pages, appView, appRouter;
 
-        appRouter = new AppRouter();
-        BB.history.start();
+		// Load the configuration
+		$.ajax({
+			url: "content/config.json",
+			dataType: "json",
+			cache: false
+		}).done( function ( config ) {
 
-        pages = new PagesCollection( [], { pagesConfig: Config.pages } );
+			appRouter = new AppRouter();
+			BB.history.start();
 
-		appView = new AppView({
-            router: appRouter,
-            docNavView: new DocNavView( { collection: pages } ),
-            contentView: new ContentView(),
-            pages: pages
-        });
-        
-		appView.render();
+			pages = new PagesCollection( [], { pagesConfig: config } );
+
+			appView = new AppView({
+				router: appRouter,
+				docNavView: new DocNavView( { collection: pages } ),
+				contentView: new ContentView(),
+				pages: pages
+			});
+
+			appView.render();
+		});
+
 	}
 );
