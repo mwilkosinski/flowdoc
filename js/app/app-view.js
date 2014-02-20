@@ -10,7 +10,7 @@ define(
 
 		return BB.View.extend({
 
-			el: "#flowdoc",
+			el: "#flowdoc-page",
 
 			docNavView: null,
 			contentView: null,
@@ -66,8 +66,8 @@ define(
 
 			render: function() {
 
-				this.$("#doc-nav").append( this.docNavView.el );
-				this.$("#content").append( this.contentView.el );
+				this.$el.append( this.docNavView.el );
+				this.$el.append( this.contentView.el );
 
 				return this;
 			},

@@ -12,7 +12,7 @@ define(
 		return BB.View.extend({
 
 			tagName: "ul",
-			className: "doc-nav-menu",
+			className: "flowdoc-doc-nav",
             itemViews: [],
 
 			render: function() {

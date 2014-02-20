@@ -10,6 +10,9 @@ define(
 
 		return BB.View.extend({
 
+            tagName: "div",
+            className: "flowdoc-content",
+
 			render: function( content ) {
 
                 var element = this.$el;

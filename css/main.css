@@ -1,0 +1,43 @@
+html {
+    height: 100%;
+}
+#flowdoc {
+    height: 100%;
+    margin: 0;
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+#flowdoc-page {
+    height: 100%;
+}
+
+#flowdoc-page .flowdoc-doc-nav {
+	width: 15em;
+	height: 100%;
+	float: left;
+    margin: 0;
+    padding: 1em;
+    background: #eee;
+}
+#flowdoc-page .flowdoc-content {
+    max-width: 60em;
+    overflow: hidden;
+    padding: 0 1em;
+}
+
+#flowdoc-page .flowdoc-content > h1 {
+    font-weight: normal;
+    border-bottom: 1px solid #ccc;
+}
+
+#flowdoc-page .flowdoc-example {
+    padding: 1em;
+    border: 1px solid #eee;
+}
+
+#flowdoc-page .flowdoc-content > pre {
+    padding: 1em;
+    border: 1px solid #eee;
+}

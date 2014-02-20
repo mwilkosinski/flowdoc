@@ -4,12 +4,15 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 Pellentesque nec tincidunt urna, __vitae fermentum sapien__. Morbi ut feugiat risus, vitae laoreet eros. Fusce lacinia risus ut luctus ornare. Ut venenatis urna vel viverra varius. Aliquam erat volutpat. Sed tincidunt tincidunt ultricies. Mauris a turpis ac orci volutpat lobortis. Donec at mi metus. Donec vestibulum ante at ipsum dignissim dictum.
 
 [flowdoc_example]
+
 ### This is an example
+
+Morbi ut feugiat risus, vitae laoreet eros. Fusce lacinia risus ut luctus ornare.
+
+[/flowdoc_example]
 
 ```
 <some_code>
 	...
 </some_code>
 ```
-
-[/flowdoc_example]
