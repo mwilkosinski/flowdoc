@@ -18,9 +18,38 @@ html {
 	height: 100%;
 	float: left;
     margin: 0;
-    padding: 1em;
+    padding: 1em 0;
     background: #eee;
 }
+
+#flowdoc-page .flowdoc-doc-nav .menu-item {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#flowdoc-page .flowdoc-doc-nav .menu-item-link {
+    display: block;
+    padding: .25em 1em;
+    outline: none;
+    text-decoration: none;
+    font-size: .85em;
+    color: #222;
+}
+
+#flowdoc-page .flowdoc-doc-nav .menu-item.active .menu-item-link {
+    background: #ccc;
+
+}
+
+#flowdoc-page .flowdoc-doc-nav .menu-item.active .menu-item-link:hover,
+#flowdoc-page .flowdoc-doc-nav .menu-item-link:hover {
+    background: #444;
+    color: #fff;
+}
+
+
 #flowdoc-page .flowdoc-content {
     max-width: 60em;
     overflow: hidden;
