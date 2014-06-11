@@ -1,4 +1,11 @@
+
+//
+// Simple registry to store data which needs
+// to be accessible anywhere in the application
+//
+
 define( [], function () {
+
 		"use strict";
 
 		return {

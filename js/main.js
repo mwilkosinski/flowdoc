@@ -3,13 +3,13 @@
 require.config({
 	urlArgs: "bust=" + (new Date()).getTime(),
 	paths: {
-		jquery:	    "lib/jquery-1.11.0.min",
+		jquery:     "lib/jquery-1.11.0.min",
 		underscore: "lib/underscore-min",
 		backbone:   "lib/backbone-min",
-		text:	    "lib/require.text",
-		marked:	    "lib/marked",
-		state:	    "app/app-state",
-		vent:	    "app/app-event-aggregator"
+		text:       "lib/require.text",
+		marked:     "lib/marked",
+		state:      "app/app-state",
+		vent:       "app/app-event-aggregator"
 	},
 	shim: {
 		underscore: {
@@ -39,6 +39,7 @@ require(
 		ContentView,
 		PagesCollection
 	) {
+
 		"use strict";
 
 		var pages, appView, appRouter;
@@ -64,6 +65,5 @@ require(
 
 			appView.render();
 		});
-
 	}
 );

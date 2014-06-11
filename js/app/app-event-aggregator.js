@@ -1,11 +1,20 @@
+
+//
+// Event Aggregator
+//
+
 define(
 	[
-        "underscore",
-        "backbone"
+		"underscore",
+		"backbone"
 	],
-	function ( _, BB ) {
-        "use strict";
+	function (
+		_,
+		BB
+	) {
 
-        return _.extend({}, BB.Events);
+		"use strict";
+
+		return _.extend({}, BB.Events);
 	}
 );

@@ -1,9 +1,14 @@
 
+//
+// Page model
+//
+
 define(
 	[
 		"backbone"
 	],
 	function ( BB ) {
+
 		"use strict";
 
 		return BB.Model.extend({
@@ -25,13 +30,12 @@ define(
 			generateSlug: function() {
 				var slug = this.get("title");
 				slug = slug.toLowerCase();
-                slug = slug.replace(/[^a-z0-9\s]/g, '');
-                slug = slug.replace(/[_\s]/g, '-');
+				slug = slug.replace(/[^a-z0-9\s]/g, '');
+				slug = slug.replace(/[_\s]/g, '-');
 				this.set({slug: slug});
 				return slug;
 			}
 
 		});
-
 	}
 );

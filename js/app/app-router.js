@@ -1,27 +1,36 @@
 
+//
+// The main application router
+//
+
 define(
-    [
-        "backbone",
-        "vent",
-        "state"
-    ],
-    function ( BB, vent, state ) {
-        "use strict";
+	[
+		"backbone",
+		"vent",
+		"state"
+	],
+	function (
+		BB,
+		vent,
+		state
+	) {
 
-        return BB.Router.extend({
+		"use strict";
 
-            routes: {
-                "page/:query": "setPageRoute"
-            },
+		return BB.Router.extend({
 
-            setPageRoute: function( pageSlug ) {
-                state.set("pageRoute", pageSlug);
-                vent.trigger("pageRoute", pageSlug);
-            },
+			routes: {
+				"page/:query": "setPageRoute"
+			},
 
-            setPageRouteURL: function( pageSlug ) {
-                this.navigate("page/" + pageSlug, {trigger: false});
-            }
-        });
-    }
+			setPageRoute: function( pageSlug ) {
+				state.set("pageRoute", pageSlug);
+				vent.trigger("pageRoute", pageSlug);
+			},
+
+			setPageRouteURL: function( pageSlug ) {
+				this.navigate("page/" + pageSlug, {trigger: false});
+			}
+		});
+	}
 );
