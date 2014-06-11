@@ -46,7 +46,7 @@ require(
 
 		// Load the configuration
 		$.ajax({
-			url: "content/config.json",
+			url: "config.json",
 			dataType: "json",
 			cache: false
 		}).done( function ( config ) {

@@ -60,7 +60,7 @@ define(
 				var self = this;
 
 				return $.ajax({
-					url: "content/" + page.file,
+					url: page.file,
 					dataType: "text",
 					cache: false
 				}).done(function ( pageContent ) {
