@@ -2,6 +2,8 @@
 
 FlowDoc is a simple and lightweight tool for creating [style guides](http://alistapart.com/article/creating-style-guides) and project documentation. It builds a simple website from a bunch of text files written in markdown format.
 
+See it in action: http://mwilkosinski.github.io/flowdoc/
+
 ## How to use
 
 There is a small example of styleguide in the `example` folder which you can use as reference or starting point:
