@@ -1,3 +1,21 @@
-# FlowDOC Demo
+# FlowDoc Demo
 
-adasd
+FlowDoc is a simple and lightweight tool for creating [style guides](http://alistapart.com/article/creating-style-guides) and project documentation. It builds a simple website from a bunch of text files written in markdown format.
+
+This small site demonstrates FlowDoc in action. It shows documentation for the [Bootstrap](http://getbootstrap.com/) buttons and forms in a style guide format.
+
+The FlowDoc source code is available here: https://github.com/mwilkosinski/flowdoc. The source code of this demo site is located in the `example` subdirecotry.
+
+
+## How to use FlowDoc
+
+The easiest way to start is to make a copy of the `example` folder, then:
+
+1. Add your markdown files to the `pages` directory
+2. Edit the file `config.json` adding the file name and a title for each of your markdown files (the title will appear in the navigation menu).
+
+Please note, FlowDoc must be served from a HTTP server, it will _NOT_ work locally opened as `file:///...`
+
+## Under the bonnet
+
+For those interested in the inner workings of FlowDoc, it's been written in [Backbone.js](http://backbonejs.org/) and uses [RequireJS](http://requirejs.org/) for modular architecture.
